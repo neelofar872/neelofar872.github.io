@@ -183,3 +183,106 @@ card.style.background="rgba(255,255,255,.12)";
     }
   );
 }
+/* ===================================
+   AnimeMiniVerse Premium JavaScript
+=================================== */
+
+// ===============================
+// Fade-in Animation on Scroll
+// ===============================
+
+const observer = new IntersectionObserver((entries) => {
+
+entries.forEach(entry => {
+
+if(entry.isIntersecting){
+
+entry.target.classList.add("show");
+
+}
+
+});
+
+},{
+threshold:0.2
+});
+
+document.querySelectorAll("section, .card").forEach((el)=>{
+observer.observe(el);
+});
+
+// ===============================
+// Navbar Background on Scroll
+// ===============================
+
+window.addEventListener("scroll",()=>{
+
+const nav=document.querySelector("nav");
+
+if(window.scrollY>60){
+
+nav.style.background="rgba(0,0,0,.65)";
+
+}else{
+
+nav.style.background="rgba(0,0,0,.35)";
+
+}
+
+});
+
+// ===============================
+// Hero Button Animation
+// ===============================
+
+document.querySelectorAll(".buttons a").forEach(btn=>{
+
+btn.addEventListener("mouseenter",()=>{
+
+btn.style.transform="scale(1.08)";
+
+});
+
+btn.addEventListener("mouseleave",()=>{
+
+btn.style.transform="scale(1)";
+
+});
+
+});
+
+// ===============================
+// Smooth Scroll
+// ===============================
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+
+anchor.addEventListener("click",function(e){
+
+e.preventDefault();
+
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
+
+target.scrollIntoView({
+
+behavior:"smooth"
+
+});
+
+}
+
+});
+
+});
+
+// ===============================
+// Welcome Message
+// ===============================
+
+window.onload=()=>{
+
+console.log("✨ Welcome to AnimeMiniVerse ✨");
+
+};
