@@ -1,16 +1,16 @@
-// =============================
-// AnimeMiniVerse Premium Script
-// =============================
+// ===============================
+// AnimeMiniVerse Premium Effects
+// ===============================
 
-// Navbar Background Change
+// Navbar Background on Scroll
 
-window.addEventListener("scroll",function(){
+window.addEventListener("scroll", () => {
 
 const nav=document.querySelector("nav");
 
 if(window.scrollY>80){
 
-nav.style.background="rgba(0,0,0,.65)";
+nav.style.background="rgba(15,23,42,.85)";
 
 }else{
 
@@ -20,56 +20,38 @@ nav.style.background="rgba(0,0,0,.35)";
 
 });
 
-
 // Smooth Scroll
 
-document.querySelectorAll('nav a').forEach(link=>{
+document.querySelectorAll('nav a').forEach(anchor=>{
 
-link.addEventListener('click',function(e){
+anchor.addEventListener("click",function(e){
 
 e.preventDefault();
 
-const target=document.querySelector(this.getAttribute('href'));
+const target=document.querySelector(this.getAttribute("href"));
+
+if(target){
 
 target.scrollIntoView({
 
-behavior:'smooth'
+behavior:"smooth"
+
+});
+
+}
 
 });
 
 });
 
-});
+// Hero Image Floating
 
-
-// Floating Cards Animation
-
-const cards=document.querySelectorAll(".card");
-
-cards.forEach((card,index)=>{
-
-card.style.animation=`float 3s ease-in-out ${index*0.2}s infinite`;
-
-});
-
-
-// Hero Image Glow
-
-const banner=document.querySelector(".hero-right img");
+const heroImage=document.querySelector(".hero-image img");
 
 setInterval(()=>{
 
-banner.style.filter="drop-shadow(0 0 25px gold)";
+heroImage.classList.toggle("floating");
 
-setTimeout(()=>{
+},2500);
 
-banner.style.filter="drop-shadow(0 0 8px white)";
-
-},1000);
-
-},2000);
-
-
-// Welcome Console
-
-console.log("✨ Welcome to AnimeMiniVerse ✨");
+console.log("✨ AnimeMiniVerse Loaded Successfully ✨");
