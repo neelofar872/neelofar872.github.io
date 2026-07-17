@@ -9,50 +9,187 @@
 <meta name="description" content="AI Animation, Anime Cooking, ASMR, Baby Cartoons and Family Friendly Videos.">
 
 <link rel="stylesheet" href="style.css">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+background:url("background.jpg") no-repeat center center fixed;
+background-size:cover;
+color:white;
+}
+
+body::before{
+content:"";
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.45);
+z-index:-1;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:rgba(0,0,0,.4);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+font-size:30px;
+font-weight:bold;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:25px;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-weight:bold;
+}
+
+.hero{
+text-align:center;
+padding:120px 20px;
+}
+
+.hero h1{
+font-size:60px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:35px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:50px;
+text-decoration:none;
+color:white;
+font-weight:bold;
+margin:10px;
+transition:.3s;
+}
+
+.youtube{
+background:#ff0000;
+}
+
+.instagram{
+background:#E1306C;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+section{
+padding:70px 10%;
+text-align:center;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:20px;
+margin-top:35px;
+}
+
+.card{
+background:rgba(255,255,255,.12);
+backdrop-filter:blur(10px);
+padding:25px;
+border-radius:20px;
+}
+
+.card h3{
+margin:15px 0;
+}
+
+footer{
+background:rgba(0,0,0,.6);
+padding:20px;
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+nav{
+flex-direction:column;
+}
+
+nav ul{
+margin-top:15px;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
+
+</style>
+
 </head>
 
 <body>
-body {
-    margin: 0;
-    min-height: 100vh;
-    background-image: url("background.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 <nav>
-<div class="logo">🎬 AnimeMiniVerse</div>
+
+<div class="logo">
+🎬 AnimeMiniVerse
+</div>
 
 <ul>
+
 <li><a href="#">Home</a></li>
 <li><a href="#about">About</a></li>
 <li><a href="#videos">Videos</a></li>
 <li><a href="#contact">Contact</a></li>
+
 </ul>
 
 </nav>
 
 <header class="hero">
-<head>
 
-
-</style>
-
-</head>
 <h1>AnimeMiniVerseCartoons</h1>
 
 <p>
 AI Animation • Cartoon Stories • ASMR • Kids Entertainment
 </p>
 
-<a class="youtube"
+<a class="btn youtube"
 href="https://www.youtube.com/@AnimeMiniVersecartoons"
 target="_blank">
 ▶ Subscribe on YouTube
 </a>
 
-<a class="instagram"
+<a class="btn instagram"
 href="https://www.instagram.com/animeminiversecartoons"
 target="_blank">
 📷 Follow Instagram
@@ -62,18 +199,20 @@ target="_blank">
 
 <section id="about">
 
-<h2>About</h2>
+<h2>About Us</h2>
+
+<br>
 
 <p>
 
-Welcome to AnimeMiniVerseCartoons!
+Welcome to AnimeMiniVerseCartoons.
 
-Enjoy colorful AI animation,
-anime cooking,
+We create colorful AI animated cartoons,
+anime cooking videos,
 ASMR,
-cute baby videos,
-fantasy adventures,
-and fun family entertainment.
+cute baby stories,
+dragon adventures
+and family friendly entertainment.
 
 </p>
 
@@ -81,7 +220,7 @@ and fun family entertainment.
 
 <section id="videos">
 
-<h2>Our Content</h2>
+<h2>Our Categories</h2>
 
 <div class="cards">
 
@@ -94,19 +233,19 @@ and fun family entertainment.
 <div class="card">
 👶
 <h3>Baby Cartoons</h3>
-<p>Cute stories for everyone.</p>
+<p>Cute animated stories.</p>
 </div>
 
 <div class="card">
 🐉
-<h3>Fantasy</h3>
-<p>Dragon & adventure videos.</p>
+<h3>Fantasy Adventure</h3>
+<p>Dragon and magical worlds.</p>
 </div>
 
 <div class="card">
 🎧
 <h3>ASMR</h3>
-<p>Relaxing AI sounds.</p>
+<p>Relaxing AI sound experiences.</p>
 </div>
 
 </div>
@@ -115,15 +254,17 @@ and fun family entertainment.
 
 <section id="contact">
 
-<h2>Follow Us</h2>
+<h2>Connect With Us</h2>
 
-<a class="youtube"
+<br>
+
+<a class="btn youtube"
 href="https://www.youtube.com/@AnimeMiniVersecartoons"
 target="_blank">
 YouTube
 </a>
 
-<a class="instagram"
+<a class="btn instagram"
 href="https://www.instagram.com/animeminiversecartoons"
 target="_blank">
 Instagram
