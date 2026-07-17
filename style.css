@@ -443,3 +443,75 @@ font-size:30px;
 }
 
 }
+/* Floating Animation */
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-12px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+
+/* Hero Title Glow */
+
+.hero h1{
+
+animation:titleGlow 2s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+from{
+
+text-shadow:0 0 15px #00ffff;
+
+}
+
+to{
+
+text-shadow:0 0 35px gold;
+
+}
+
+}
+
+
+/* Card Hover */
+
+.card:hover{
+
+transform:translateY(-15px) scale(1.05);
+
+}
+
+
+/* Button Glow */
+
+.youtube:hover{
+
+box-shadow:0 0 25px red;
+
+}
+
+.instagram:hover{
+
+box-shadow:0 0 25px deeppink;
+
+}
