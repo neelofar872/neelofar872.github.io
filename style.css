@@ -560,3 +560,67 @@ font-size:32px;
 }
 
 }
+/* Fade Animation */
+
+section,
+.card{
+
+opacity:0;
+
+transform:translateY(50px);
+
+transition:1s;
+
+}
+
+.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* Sparkles */
+
+.sparkle{
+
+position:fixed;
+
+width:6px;
+
+height:6px;
+
+border-radius:50%;
+
+background:white;
+
+pointer-events:none;
+
+box-shadow:0 0 15px white;
+
+animation:sparkleUp linear forwards;
+
+z-index:999;
+
+}
+
+@keyframes sparkleUp{
+
+0%{
+
+transform:translateY(0) scale(1);
+
+opacity:1;
+
+}
+
+100%{
+
+transform:translateY(-800px) scale(.2);
+
+opacity:0;
+
+}
+
+}
