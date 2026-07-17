@@ -276,3 +276,131 @@ font-size:30px;
 }
 
 }
+/* Floating Banner */
+
+.hero-image img{
+
+animation:floatImage 5s ease-in-out infinite;
+
+}
+
+@keyframes floatImage{
+
+0%{
+
+transform:translateY(0px);
+
+}
+
+50%{
+
+transform:translateY(-18px);
+
+}
+
+100%{
+
+transform:translateY(0px);
+
+}
+
+}
+
+/* Hero Title Glow */
+
+.hero h1{
+
+animation:titleGlow 3s infinite alternate;
+
+}
+
+@keyframes titleGlow{
+
+from{
+
+text-shadow:0 0 15px #00ffff;
+
+}
+
+to{
+
+text-shadow:0 0 35px gold;
+
+}
+
+}
+
+/* Cards */
+
+.card{
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.card::before{
+
+content:"";
+
+position:absolute;
+
+top:-100%;
+
+left:-100%;
+
+width:220%;
+
+height:220%;
+
+background:linear-gradient(
+45deg,
+transparent,
+rgba(255,255,255,.25),
+transparent
+);
+
+transform:rotate(25deg);
+
+transition:.8s;
+
+}
+
+.card:hover::before{
+
+top:100%;
+
+left:100%;
+
+}
+
+/* Buttons */
+
+.btn{
+
+box-shadow:0 10px 25px rgba(0,0,0,.3);
+
+}
+
+.btn:hover{
+
+transform:scale(1.08);
+
+}
+
+/* Section Titles */
+
+section h2{
+
+text-shadow:0 0 12px rgba(255,215,0,.8);
+
+}
+
+/* Footer */
+
+footer{
+
+background:linear-gradient(90deg,#111827,#1e3a8a);
+
+}
