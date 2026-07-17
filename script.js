@@ -1,225 +1,14 @@
-// Welcome message
-window.addEventListener("load", () => {
-  console.log("Welcome to AnimeMiniVerseCartoons!");
-});
+// =============================
+// AnimeMiniVerse Premium Script
+// =============================
 
-// Fade-in animation on scroll
-const cards = document.querySelectorAll(".card");
+// Navbar Background Change
 
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = "1";
-      entry.target.style.transform = "translateY(0)";
-    }
-  });
-}, {
-  threshold: 0.2
-});
-
-cards.forEach((card) => {
-  card.style.opacity = "0";
-  card.style.transform = "translateY(40px)";
-  card.style.transition = "all 0.8s ease";
-  observer.observe(card);
-});
-
-// Floating stars
-for (let i = 0; i < 40; i++) {
-  const star = document.createElement("div");
-  star.className = "star";
-
-  star.style.position = "fixed";
-  star.style.width = "3px";
-  star.style.height = "3px";
-  star.style.background = "white";
-  star.style.borderRadius = "50%";
-  star.style.left = Math.random() * 100 + "vw";
-  star.style.top = Math.random() * 100 + "vh";
-  star.style.opacity = Math.random();
-
-  document.body.appendChild(star);
-
-  let duration = 6 + Math.random() * 8;
-
-  star.animate(
-    [
-      { transform: "translateY(0px)" },
-      { transform: "translateY(-120px)" }
-    ],
-    {
-      duration: duration * 1000,/* ===========================
-   AnimeMiniVerse Premium JS
-=========================== */
-
-// Smooth fade-in animation
-const observer = new IntersectionObserver((entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-});
-
-document.querySelectorAll("section,.card").forEach((el)=>{
-
-observer.observe(el);
-
-});
-
-// ===========================
-// Floating Sparkles
-// ===========================
-
-function createSparkle(){
-
-const sparkle=document.createElement("div");
-
-sparkle.className="sparkle";
-
-sparkle.style.left=Math.random()*window.innerWidth+"px";
-
-sparkle.style.top=window.innerHeight+"px";
-
-sparkle.style.animationDuration=(3+Math.random()*4)+"s";
-
-document.body.appendChild(sparkle);
-
-setTimeout(()=>{
-
-sparkle.remove();
-
-},7000);
-
-}
-
-setInterval(createSparkle,400);
-
-// ===========================
-// Typing Effect
-// ===========================
-
-const title=document.querySelector(".hero h1");
-
-if(title){
-
-const text=title.innerText;
-
-title.innerText="";
-
-let i=0;
-
-function type(){
-
-if(i<text.length){
-
-title.innerHTML+=text.charAt(i);
-
-i++;
-
-setTimeout(type,70);
-
-}
-
-}
-
-type();
-
-}
-
-// ===========================
-// Navbar Shadow on Scroll
-// ===========================
-
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll",function(){
 
 const nav=document.querySelector("nav");
 
-if(window.scrollY>50){
-
-nav.style.boxShadow="0 10px 30px rgba(0,0,0,.35)";
-
-}else{
-
-nav.style.boxShadow="none";
-
-}
-
-});
-
-// ===========================
-// Card Hover Glow
-// ===========================
-
-document.querySelectorAll(".card").forEach(card=>{
-
-card.addEventListener("mousemove",(e)=>{
-
-const x=e.offsetX;
-
-const y=e.offsetY;
-
-card.style.background=
-`radial-gradient(circle at ${x}px ${y}px,
-rgba(255,255,255,.25),
-rgba(255,255,255,.12))`;
-
-});
-
-card.addEventListener("mouseleave",()=>{
-
-card.style.background="rgba(255,255,255,.12)";
-
-});
-
-});
-      iterations: Infinity
-    }
-  );
-}
-/* ===================================
-   AnimeMiniVerse Premium JavaScript
-=================================== */
-
-// ===============================
-// Fade-in Animation on Scroll
-// ===============================
-
-const observer = new IntersectionObserver((entries) => {
-
-entries.forEach(entry => {
-
-if(entry.isIntersecting){
-
-entry.target.classList.add("show");
-
-}
-
-});
-
-},{
-threshold:0.2
-});
-
-document.querySelectorAll("section, .card").forEach((el)=>{
-observer.observe(el);
-});
-
-// ===============================
-// Navbar Background on Scroll
-// ===============================
-
-window.addEventListener("scroll",()=>{
-
-const nav=document.querySelector("nav");
-
-if(window.scrollY>60){
+if(window.scrollY>80){
 
 nav.style.background="rgba(0,0,0,.65)";
 
@@ -231,58 +20,56 @@ nav.style.background="rgba(0,0,0,.35)";
 
 });
 
-// ===============================
-// Hero Button Animation
-// ===============================
 
-document.querySelectorAll(".buttons a").forEach(btn=>{
-
-btn.addEventListener("mouseenter",()=>{
-
-btn.style.transform="scale(1.08)";
-
-});
-
-btn.addEventListener("mouseleave",()=>{
-
-btn.style.transform="scale(1)";
-
-});
-
-});
-
-// ===============================
 // Smooth Scroll
-// ===============================
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+document.querySelectorAll('nav a').forEach(link=>{
 
-anchor.addEventListener("click",function(e){
+link.addEventListener('click',function(e){
 
 e.preventDefault();
 
-const target=document.querySelector(this.getAttribute("href"));
-
-if(target){
+const target=document.querySelector(this.getAttribute('href'));
 
 target.scrollIntoView({
 
-behavior:"smooth"
-
-});
-
-}
+behavior:'smooth'
 
 });
 
 });
 
-// ===============================
-// Welcome Message
-// ===============================
+});
 
-window.onload=()=>{
+
+// Floating Cards Animation
+
+const cards=document.querySelectorAll(".card");
+
+cards.forEach((card,index)=>{
+
+card.style.animation=`float 3s ease-in-out ${index*0.2}s infinite`;
+
+});
+
+
+// Hero Image Glow
+
+const banner=document.querySelector(".hero-right img");
+
+setInterval(()=>{
+
+banner.style.filter="drop-shadow(0 0 25px gold)";
+
+setTimeout(()=>{
+
+banner.style.filter="drop-shadow(0 0 8px white)";
+
+},1000);
+
+},2000);
+
+
+// Welcome Console
 
 console.log("✨ Welcome to AnimeMiniVerse ✨");
-
-};
