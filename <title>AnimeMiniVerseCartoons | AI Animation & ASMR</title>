@@ -1,0 +1,48 @@
+<header style="background:linear-gradient(135deg,#6a11cb,#2575fc);color:#fff;padding:60px 20px;text-align:center;">
+  <h1>🎬 AnimeMiniVerseCartoons</h1>
+  <p>AI Animation • Cartoon Stories • ASMR • Kids Entertainment</p>
+
+  <a href="https://www.youtube.com/@AnimeMiniVersecartoons" target="_blank"
+     style="display:inline-block;background:#ff0000;color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;margin:10px;font-weight:bold;">
+     ▶ Subscribe on YouTube
+  </a>
+
+  <a href="https://www.instagram.com/animeminiversecartoons" target="_blank"
+     style="display:inline-block;background:#E1306C;color:#fff;padding:12px 24px;border-radius:30px;text-decoration:none;margin:10px;font-weight:bold;">
+     📷 Follow on Instagram
+  </a>
+</header>
+
+<section style="max-width:1000px;margin:40px auto;padding:20px;text-align:center;">
+  <h2>🌟 Welcome</h2>
+  <p>
+    Welcome to <b>AnimeMiniVerseCartoons</b>! Here you'll find colorful AI animation,
+    anime cooking, ASMR videos, cute baby stories, and fun family-friendly content.
+  </p>
+</section>
+
+<section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px;max-width:1000px;margin:auto;padding:20px;">
+  <div style="background:#f8f8f8;padding:20px;border-radius:15px;">
+    <h3>🍳 Anime Cooking</h3>
+    <p>Creative AI cooking and ASMR videos.</p>
+  </div>
+
+  <div style="background:#f8f8f8;padding:20px;border-radius:15px;">
+    <h3>👶 Baby Cartoons</h3>
+    <p>Fun and cute animated baby stories.</p>
+  </div>
+
+  <div style="background:#f8f8f8;padding:20px;border-radius:15px;">
+    <h3>🐉 Adventure Stories</h3>
+    <p>Colorful fantasy and anime adventures.</p>
+  </div>
+
+  <div style="background:#f8f8f8;padding:20px;border-radius:15px;">
+    <h3>🎧 ASMR</h3>
+    <p>Relaxing AI-generated ASMR experiences.</p>
+  </div>
+</section>
+
+<footer style="margin-top:40px;background:#111;color:#fff;text-align:center;padding:20px;">
+  © 2026 AnimeMiniVerseCartoons | Made with ❤️
+</footer>
